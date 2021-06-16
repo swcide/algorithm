@@ -24,6 +24,7 @@ n을 d(n)의 생성자라고 한다.
 
 
 """
+
 all_list = set(range(1,10001))  # list는 산술연산이 안되기 때문에 set으로 바꿈
 self_number = set() # 중복제거를 위해 셋을 사용
 
@@ -32,7 +33,6 @@ for i in range(1,10001):
     for j in str(i):  # string형으로 바꾸게 되면 자릿수가 각 index를 가지게 된다!
         i += int(j)  # 12 일 경우에 i = 10(int) + 1(int) + 2(int) !!
     self_number.add(i)
-
 
 
 answer = sorted(all_list-self_number)

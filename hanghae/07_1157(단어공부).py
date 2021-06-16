@@ -15,6 +15,7 @@ for i in a:
     index = ord(i)-ord('A')
     alpha_index[index] += 1
 
+
 max_index = max(alpha_index)
 
 for i in range(len(alpha_index)):

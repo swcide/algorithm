@@ -23,12 +23,49 @@ abcabc
 a              1 #a만 그룹단어
 
 """
+'''
+for 문으로 빼서 풀기 
+'''
+# n = int(input())
+# count = n
+#
+# for i in range(n):
+#     word = input()
+#     for j in range(len(word)-1):
+#         if word[j] == word[j+1]:
+#             pass
+#         elif word[j] in word[j+1:]:
+#             count += 1
+#             # break
+#
+# print(count)
+#
+
+
+#  뭔말인지 모르겠슴ㅋㅋ
+# group = 0
+# n = int(input())
+# for _ in range(n):
+#     word = input()
+# 
+#     if list(word) == sorted(word, key=word.find):
+#         print(sorted(word))
+#         group += 1
+#
+# print(group)
+
 
 n = int(input())
 
-word = [input() for i in range(n)]
-
-for i in word:
-    print(word)
-
-
+group_word = 0
+for _ in range(n):
+    word = input()
+    error = 0
+    for index in range(len(word)-1):  # 인덱스 범위 생성 : 0부터 단어개수 -1까지
+        if word[index] != word[index+1]:  # 연달은 두 문자가 다른 때,
+            new_word = word[index+1:]  # 현재글자 이후 문자열을 새로운 단어로 생성
+            if new_word.count(word[index]) > 0:  # 남은 문자열에서 현재글자가 있있다면
+                error += 1  # error에 1씩 증가.
+    if error == 0:
+        group_word += 1  # error가 0이면 그룹단어
+print(group_word)

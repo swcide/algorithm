@@ -24,17 +24,24 @@ n보다 크고, 2n보다 작거나 같은 소수는 적어도 하나 존재한�
 100000      8392
 0
 """
-n = 0
-for i in range(int(input())):
-    n = i
+
+n = 123456
+sieve = [True] * n
+
+m = int(n ** 0.5) # 제곱근 구하기
 
 
-    a = [False,False] + [True]*(n-1)
-    primes=[]
+for i in range(2, m + 1):
+    if sieve[i] == True:  # i가 소수인 경우
+        for j in range(i + i, n, i):  # i이후 i의 배수들을 False 7판정
+            sieve[j] = False
 
-    for i in range(2,n+1):
-      if a[i]:
-        primes.append(i)
-        for j in range(2*i, n+1, i):
-            a[j] = False
-print(primes)
+ans = [i for i in range(2, n) if sieve  [i] == True]
+
+while True:
+    u = int(input())
+
+    if u == 0:
+        break
+    else:
+        print((ans[u-1:(2 * u)-1]))

@@ -33,3 +33,6 @@ y지점에 도착하기 바로 직전의 이동거리는 반드시 1광년으로
 
 
 """
+# word = 'happy'
+word = 'new'
+print(sorted(word, key=word.find))
