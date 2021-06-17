@@ -16,3 +16,22 @@
 10
 """''
 
+a, b = map(int, input().split())
+
+
+def factorial(n):
+    fac = 1
+    for i in range(1, n + 1):
+        fac *= i
+    return fac
+
+
+print(int(factorial(a) / (factorial(b) * factorial(a - b))))
+
+"""
+이항개수의 값을 구하는 공식을 활용한다!
+
+    n                               n!
+    k   일때 이 값을 구하는 공식은 k!(n-k)! 이라고 한다.
+                             
+"""

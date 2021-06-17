@@ -15,6 +15,4 @@ def factorial(n): # 5
 
 print(factorial(5))
 
-input = "abcba"
-
 

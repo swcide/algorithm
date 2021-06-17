@@ -76,6 +76,10 @@ if count == 0:
         count = n // 3
 
 print(count)
+
+"""
+시간초과 나지 않는 풀이법
+"""
 # bag = 0
 # while n >= 0 :
 #     if n % 5 == 0 :  # 5의 배수이면
