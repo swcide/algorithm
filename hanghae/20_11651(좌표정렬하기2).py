@@ -18,13 +18,32 @@ y좌표가 같으면 x좌표가 증가하는 순서로 정렬한 다음
 x의 크기가 같으면 y크기순으로 비교
 """
 import sys
+
 input = sys.stdin.readline
 
 n = int(input())
 list_a = []
 for _ in range(n):
-    x,y = map(int,input().split())
-    list_a.append([x,y])
-print(list_a)
+    x, y = map(int, input().split())
+    list_a.append([x, y])
+b = sorted(list_a, key=lambda a: (a[1], a[0]))
 
-list_a.sort(key=lambda a: (a[1],-a[1]))
+
+for i in range(n):
+    print(b[i][0],b[i][1])
+
+"""
+sorted 정렬법 !
+
+# key 인자에 함수를 넘겨주면 해당 함수의 반환값을 비교하여 순서대로 정렬한다.
+c = sorted(a, key = lambda x : x[0])
+# c = [(0, 1), (1, 2), (3, 0), (5, 1), (5, 2)]
+d = sorted(a, key = lambda x : x[1])
+# d = [(3, 0), (0, 1), (5, 1), (1, 2), (5, 2)]
+
+# 아이템 첫 번째 인자를 기준으로 오름차순으로 먼저 정렬하고,
+# 그리고 그 안에서 다음 두 번째 인자를 기준으로 내림차순으로 정렬하게 하려면, 다음과 같이 할 수 있다.
+e = [(1, 3), (0, 3), (1, 4), (1, 5), (0, 1), (2, 4)]
+f = sorted(e, key = lambda x : (x[0], -x[1]))
+# f = [(0, 3), (0, 1), (1, 5), (1, 4), (1, 3), (2, 4)]
+"""

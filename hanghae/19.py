@@ -7,4 +7,4 @@ b = [2]
 
 b += a
 # list_a
-print(b)ddd
+print(b)
