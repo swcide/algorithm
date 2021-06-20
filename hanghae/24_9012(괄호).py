@@ -35,8 +35,14 @@
 ( 라면 stack에 append 해준다.
 그뒤에 )가 나오면 pop을 해준다.
 매우 간단하다.
-if stack: 문으로 
+입력받은 문자열의 length로 for문을 돌린 뒤
+문자열의 인덱스가 "("면  stack에 append해준다.
+else일 경우엔 ")" 이므로
+if stack: 으로 조건을 건뒤(스택의 값이 널이아닐때)
+stack에 있는 값을 pop해준다. 
+else의 경우에는 stack의 값이 널이라는 의미이므로 print("NO")를 출력
 
+밑의 else문도 동일하다.
 """
 
 import sys
