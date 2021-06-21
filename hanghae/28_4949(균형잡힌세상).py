@@ -41,10 +41,141 @@ yes
 yes
 """
 
+"""
+TRY 1
 
-stack = []
 
-import sys
-input = sys.stdin.readline
+"""
+while True:
+    commend = input()
+    stack = []
+    if commend == ".":
+        break
+    for i in commend:
+        if i == '(' or i == "[":
+            stack.append(i)
+        elif i == ')':
+            if stack :
+                if stack[-1] == "(":
+                    stack.pop()
+                    print(stack)
+            else:
+                print("no")
+                break
+        elif i == ']':
+            if stack :
+                if stack[-1] == "[":
+                    stack.pop()
+            else:
+                print("no")
+                break
+    else:
+        if stack:
+            print("no")
+        else:
+            print("yes")
 
-while
+
+"""
+TRY 2
+
+# while True:
+#     commend = input()
+#     stack = []
+#     if commend == ".":
+#         break
+#     for i in commend:
+#         if i == '(' or i == "[":
+#             stack.append(i)
+#         elif i == ')':
+#             if len(stack) >= 1:
+#                 if stack[-1] == "(":
+#                     stack.pop()
+#                 else:                                #이곳이 추가 됨 .
+#                     print("no")
+#                     break
+#             else:
+#                 print("no")
+#                 break
+#         elif i == ']':
+#             if len(stack) >= 1:
+#                 if stack[-1] == "[":
+#                     stack.pop()
+#                 else:
+#                     print("no")
+#                     break
+#             else:
+#                 print("no")
+#                 break
+#     else:
+#         if stack:
+#             print("no")
+#         else:
+#             print("yes")
+"""
+
+#
+# while True:
+#     commend = input()
+#     stack = []
+#     if commend == ".":
+#         break
+#     for i in commend:
+#         if i == '(' or i == "[":
+#             stack.append(i)
+#         elif i == ')':
+#             if len(stack) >=1 and stack[-1] == "(" :
+#                 stack.pop()
+#             else:
+#                 print("no")
+#                 break
+#         elif i == ']':
+#             if len(stack) >=1 and stack[-1] == "[" :
+#                 stack.pop()
+#             else:
+#                 print("no")
+#                 break
+#     else:
+#         if stack:
+#             print("no")
+#         else:
+#             print("yes")
+
+
+"""
+백준 1934 괄호와 같은 문제라고 생각했는데 조건이 더 다양했다.
+백준 1934 () 만 보면 됐지만
+균형잡힌 세상은 []이 있기 때문에 조건을 두개로 나눠야했다.
+
+elif i == ')':
+    if stack :
+        if stack[-1] == "(":
+            stack.pop()
+    else:
+        print("no")
+        break
+elif i == ']':
+    if len(stack) >= 1:
+        if stack[-1] == "[":
+            stack.pop()
+    else:
+        print("no")
+        break
+
+테스트케이스는 통과 됐지만 백준에서 계속 오류가 났다.
+(반례를 찾을 수 없었는데 팀장이신 '김연우'님께서 찾아주셨다.. (]) 였다! )
+
+이유를 찾을 수 없어 다른 사람들에게 도움을 구했고 드디어 해결 했다!
+
+원인은 
+if stack :
+    if stack[-1] == "(":
+        stack.pop()
+else:
+    print("no")
+    break
+
+if stack[-1] =="(":
+밑에도 else를 추가해줘야했다.
+
+"""
