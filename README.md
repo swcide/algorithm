@@ -34,4 +34,5 @@ hanghae는 부트캠프를 진행하며 풀었던 알고리즘입니다.
 3. for문
    - [2739](beakjoon/2_for문/2739(구구단).py),
     [2741](beakjoon/3_for문/2741(N찍기).py),
-    [8393](beakjoon/3_for문/8393(합).py)
+    [8393](beakjoon/3_for문/8393(합).py),
+        [2742](김진태/3_for문/2742(기찍N).py)
