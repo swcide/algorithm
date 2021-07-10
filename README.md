@@ -11,9 +11,9 @@ hanghae는 부트캠프를 진행하며 풀었던 알고리즘입니다.
 
 백준 단계별로 풀어보기로 공부하고 있으며,  
 일단 목표는 실버1입니다.
-
+ - [ ]  
 ## Language
-* Python
+* Python 
 ---
 ## 🖍 Baekjoon 
 ### ❗ Check 💯
@@ -37,6 +37,10 @@ hanghae는 부트캠프를 진행하며 풀었던 알고리즘입니다.
     [8393](baekjoon/3_for문/8393(합).py),
     [2742](baekjoon/3_for문/2742(기찍N).py),
     [11021](baekjoon/3_for문/11021(A+B-7).py),
+<<<<<<< HEAD
      [11021](baekjoon/3_for문/11022(A+B-8).py),
      [2438](baekjoon/3_for문/2438(별%20찍기-1).py),
      [2439](baekjoon/3_for문/2438(별찍기-2).py)
+=======
+     [11021](baekjoon/3_for문/11022(A+B-8).py)
+>>>>>>> 743729d57e299fd0b4db1f00bdee585def6a6a4f
