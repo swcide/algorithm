@@ -42,5 +42,9 @@ hanghae는 부트캠프를 진행하며 풀었던 알고리즘입니다.
      [2439](baekjoon/3_for문/2439(별찍기-2).py),
      [10871](baekjoon/3_for문/10871(x보다작은수).py)
 4. while문
-    - [10952](baekjoon/4_while문/10952(A+B-5).py)
+    - [10952](baekjoon/4_while문/10952(A+B-5).py),
+     [10951](baekjoon/4_while문/10951(A+B-4).py)
 
+5. 1차원배열
+   - [10818](baekjoon/5_1차원배열/10818(최소,최대).py),
+     [10951](baekjoon/5_1차원배열/2562(최댓값).py)
